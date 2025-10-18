@@ -1,6 +1,3 @@
-# calculator-menu
-simple python finance calculator
-
 # Calculator Menu
 
 My first Python project! A menu-driven calculator with two tools:
