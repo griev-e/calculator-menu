@@ -4,11 +4,12 @@ while True:
     print()
     print(" 1 - Dividend Yield ")
     print(" 2 - Income ")
+    print(" 3 - Compound Interest ")
     print()
-    print(" 3 - Exit ")
+    print(" 4 - Exit ")
     print()
 
-    choice = input("Select an option (1-3): ")
+    choice = input("Select an option (1 - 4): ")
 
     if choice == "1":
         print()
@@ -115,12 +116,66 @@ while True:
                 # if confirmed no, loops back
                 print()
                 print("Try again. Reinput values. ")
-
+    
     elif choice == "3":
+        print()
+        print(" - Starting Compound Interest Calculator - ")
+        # starts loop
+        while True:
+            # asks user for values
+            print()
+            principal = input("Starting Principal: ")
+
+            print()
+            rate = input("Estimated Interest Rate Percentage: ")
+
+            print()
+            time = input("Time (in Years): ")
+
+            print()
+            compfreq = input("Compounding Frequency:\n'1' - Yearly\n'4' - Quarterly\n'12' - Monthly\n'365' - Daily\n\nInput: ")
+            
+            # calculations
+            decimalrate = round(float(rate), 2) / 100
+
+            finalvalue = float(principal) * (1 + float(decimalrate) / float(compfreq)) ** (float(compfreq) * float(time))
+
+            print()
+            print(f"Starting Principal: ${principal}")
+            print(f"Estimated Interest Rate: {rate}%")
+            print(f"Years: {time}")
+            print(f"Compounding Frequency: {compfreq}")
+            print()
+            answer = input("Is this correct? Y/N to confirm: ")
+
+            if answer == "Y" or answer == "y" or answer == "yes" or answer == "Yes":
+                print()
+                print()
+                print(f"Your future principal value is ${round(finalvalue, 2)}. ")
+                print()
+                print()
+
+            choice2 = input("'1' to return to Calculator Menu\n'2' to Exit\n\nInput: ")
+            if choice2 == "1":
+            # breaks loop
+                break
+            elif choice2 == "2":
+                print()
+                print("Thank you for using the Calculator Menu!")
+                print()
+                exit()
+            else:
+            # if confirmed no, loops back
+                print()
+                print("Try again. Reinput values. ")
+                
+            
+
+    elif choice == "4":
         print()
         print ("Thank you for using the Calculator Menu!")
         print()
         break
     else:
         print()
-        print("Invalid option. Please choose 1, 2, or 3. ")
+        print("Invalid option. Please choose 1, 2 3, or 4. ")
