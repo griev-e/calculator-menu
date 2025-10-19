@@ -155,15 +155,15 @@ while True:
                 print()
                 print()
 
-            choice2 = input("'1' to return to Calculator Menu\n'2' to Exit\n\nInput: ")
-            if choice2 == "1":
-            # breaks loop
-                break
+                choice2 = input("'1' to return to Calculator Menu\n'2' to Exit\n\nInput: ")
+                if choice2 == "1":
+                # breaks loop
+                    break
             elif choice2 == "2":
-                print()
-                print("Thank you for using the Calculator Menu!")
-                print()
-                exit()
+                    print()
+                    print("Thank you for using the Calculator Menu!")
+                    print()
+                    exit()
             else:
             # if confirmed no, loops back
                 print()
