@@ -151,7 +151,7 @@ while True:
             if answer == "Y" or answer == "y" or answer == "yes" or answer == "Yes":
                 print()
                 print()
-                print(f"Your future principal value is ${round(finalvalue, 2)}. ")
+                print(f"Your future principal value is estimated to be ${round(finalvalue, 2)}. ")
                 print()
                 print()
 
